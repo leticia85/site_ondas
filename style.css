@@ -1,0 +1,500 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.navbar {
+    background-color: #000; 
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start; 
+    position: fixed;
+    z-index: 10;
+    height: 70px;
+    top: 0;
+    width: 100%;
+}
+.navbar svg{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; 
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; 
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px;
+    background-color: white; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1); 
+}
+
+.features {
+    background-color: #282c34;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features .feature {
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px;
+    display: inline-block;
+    width: 25%;
+}
+
+.packages {
+    background-color: #ffff;
+    padding: 50px;
+    color: black;
+}
+
+.packages .content {
+    display: flex; 
+    align-items: center; 
+}
+
+.packages img {
+    width: 50%; 
+    height: auto;
+    margin-right: 20px;
+}
+
+.packages .elements-list {
+    width: 60%;
+}
+
+.packages .elements-list ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.packages .elements-list li {
+    margin-bottom: 10px; 
+}
+
+
+.testimonial {
+    background-color: #282c34;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    height: 100px;
+}
+
+.wave-section {
+    position: relative;
+    min-height: 200px;
+    text-align: center;
+    overflow: hidden; 
+    background-color: #282c34;
+}
+
+.content {
+    position: relative; 
+    z-index: 2; 
+}
+
+.wave-svg {
+    position: absolute; 
+    left: 0;
+    width: 110%; 
+    height: auto; 
+}
+
+.wave1 {
+    bottom: 0; 
+    animation: wave 5s linear infinite; 
+    fill: #4FC3F7; 
+}
+
+.wave2 {
+    bottom: -15px; 
+    animation: wave 6s linear infinite; 
+    fill: #29B6F6; 
+}
+
+.wave3 {
+    bottom: -40px; 
+    animation: wave 4s linear infinite; 
+    fill: #81D4FA; 
+}
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.banner {
+    position: relative;
+    height: 80vh;
+    background-color: #282c34;
+    background-image: url('/mnt/data/Abstract_wavy_shapes_in_shades_of_blue_and_cyan_on.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    min-height: 400px;
+}
+
+.text-content {
+    color: white;
+    width: 60%;
+}
+
+.text-content h1 {
+    font-size: 3rem; 
+    margin: 0;
+}
+
+.text-content p {
+    font-size: 1rem; 
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0288D1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 10px auto;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #29B6F6;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.card1{
+    position: relative;
+    right: 50px;
+    height: 350px;
+}
+.card2 {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background-color: #0288D1; 
+    width: 320px;
+    height: 350px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    padding: 20px; 
+    color: white; 
+    font-family: Arial, sans-serif;
+    transition: transform 0.2s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card2 img{
+    width: 100%;
+    height: auto;
+}
+
+.card2:hover {
+    transform: scale(1.05); 
+}
+
+.card2 h2 {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+.card2 p {
+    font-size: 1em; 
+    line-height: 1.4; 
+}
+
+.onda {
+    position: relative;
+    width: 80%; 
+    height: 300px; 
+    margin: auto;
+    background-color: #3498db; 
+    clip-path: path('M0,150 Q50,0 100,150 T200,150 Q250,0 300,150 T400,150 Q450,0 500,150 T600,150 Q650,0 700,150 T800,150 Q850,0 900,150 T1000,150 Q1050,0 1100,150 T1200,150 Q1250,0 1300,150 T1400,150 Q1450,0 1500,150 V300 H0 Z'); /* Forma da onda com morros mais largos */
+    animation: onda 2s ease-in-out infinite; 
+    margin-top: auto; 
+}
+
+.onda::before {
+    content: '';
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 152, 219, 0.5); 
+    clip-path: path('M0,150 Q50,0 100,150 T200,150 Q250,0 300,150 T400,150 Q450,0 500,150 T600,150 Q650,0 700,150 T800,150 Q850,0 900,150 T1000,150 Q1050,0 1100,150 T1200,150 Q1250,0 1300,150 T1400,150 Q1450,0 1500,150 V300 H0 Z'); /* Mesma forma da onda */
+    filter: blur(10px); 
+    z-index: -1; 
+}
+
+.morros {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: inherit;
+}
+
+.morros div {
+    position: absolute;
+    width: 12.5%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+.morros div:nth-child(1) { left: 0; background-color: #3498db; }
+.morros div:nth-child(2) { left: 12.5%; background-color: #3498db; }
+.morros div:nth-child(3) { left: 25%; background-color: #3498db; }
+.morros div:nth-child(4) { left: 37.5%; background-color: #3498db; }
+.morros div:nth-child(5) { left: 50%; background-color: #3498db; }
+.morros div:nth-child(6) { left: 62.5%; background-color: #3498db; }
+.morros div:nth-child(7) { left: 75%; background-color: #3498db; }
+.morros div:nth-child(8) { left: 87.5%; background-color: #3498db; }
+
+.morros div:nth-child(1):hover { background-color: #0D3B66; } 
+.morros div:nth-child(2):hover { background-color: #1F5B8C; }  
+.morros div:nth-child(3):hover { background-color: #308CBA; } 
+.morros div:nth-child(4):hover { background-color: #4DA3D3; }  
+.morros div:nth-child(5):hover { background-color: #76B8E8; }  
+.morros div:nth-child(6):hover { background-color: #A7C9E4; } 
+.morros div:nth-child(7):hover { background-color: #C7D9E7; }  
+.morros div:nth-child(8):hover { background-color: #E5F1F7; }  
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 50px;
+    border: 1px solid #888;
+    width: 50%; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content li{
+    margin: 10px auto;
+}
+#aplicacoes-saude{
+    background-color: #282c34;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    color: white;
+    min-height: 100px;
+}
+.card-saude{
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px 0px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.card-saude1{
+    width: 45%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.card-saude2{
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px 0px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.card-row-saude{
+    min-height: 200px;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.eletromagneticas {
+    position: relative;
+    min-height: 400px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+.cardoo {
+    width: 410px;
+    height: 250px;
+    perspective: 1000px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    }
+
+    .card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.999s, background-color 0.3s;
+    transform-origin: center center;
+    }
+
+    .cardoo:hover .card-inner {
+    transform: rotateY(180deg) translateX(-40px);
+    background-color: #282c34;
+    border-radius: 12px;
+    }
+
+    .card-front,
+    .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    }
+
+    .card-front {
+    background-color: #0288D1;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    }
+    .card-back {
+    background-color: #004970;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    transform: rotateY(180deg);
+    }
+    .row2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 300px;
+    }
+    .ondas-list {
+        list-style: none; /* Remove as bolinhas */
+        padding: 0; /* Remove o padding padrão */
+        margin: 0; /* Remove a margem padrão */
+        text-align: start; /* Alinha o texto no início */
+    }
+
+    .ondas-list li {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .card-back img{
+        width: 100%;
+        height: 240px;
+        border-radius: 8px;
+    }
